@@ -1,14 +1,14 @@
 $schema: vscode://schemas/color-theme
-name: Dracula
-author: Zeno Rocha
+name: Mitchell's Dracula
+author: Mitchell Simpson (Based on Dracula by Zeno Rocha)
 maintainers:
-  - Derek P Sifford <dereksifford@gmail.com>
-semanticClass: theme.dracula
+  - Mitchell Simpson <hello@jaffascript.me>
+semanticClass: theme.mitchells-dracula
 semanticHighlighting: true
 dracula:
   base:
-    - &BG        '#282A36'
-    - &FG        '#F8F8F2'
+    - &BG        '#1E1E1E'
+    - &FG        '#E8E8E8'
     - &SELECTION '#44475A'
     - &COMMENT   '#6272A4'
     - &CYAN      '#8BE9FD'
@@ -18,6 +18,11 @@ dracula:
     - &PURPLE    '#BD93F9'
     - &RED       '#FF5555'
     - &YELLOW    '#F1FA8C'
+    - &JSGLUE    '#00E59D'
+    - &JSLGREY   '#BDBDBD'
+    - &JSGREY    '#3D3D3D'
+    - &JSDGREY   '#181818'
+    - &JSBISCUIT '#060C0C'
   ansi:
     - &COLOR0        '#21222C'
     - &COLOR1        '#FF5555'
@@ -42,13 +47,13 @@ dracula:
   other:
     - &LineHighlight '#44475A75'
     - &NonText       '#FFFFFF1A'
-    - &WHITE         '#FFFFFF'
+    - &WHITE         '#E8E8E8'
     - &TAB_DROP_BG   '#44475A70'
     # UI Variants
-    - &BGLighter     '#424450'
-    - &BGLight       '#343746' # HSV (230   , 25.71, 27.45)
-    - &BGDark        '#21222C' # HSV (234.55, 25   , 17.25)
-    - &BGDarker      '#191A21' # HSV (234.55, 25   , 13   )
+    - &BGLighter     '#00e59d72'
+    - &BGLight       '#060C0C' # HSV (230   , 25.71, 27.45)
+    - &BGDark        '#181818' # HSV (234.55, 25   , 17.25)
+    - &BGDarker      '#181818' # HSV (234.55, 25   , 13   )
 
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
@@ -78,16 +83,16 @@ colors:
   contrastActiveBorder:                                                         # An extra border around active elements to separate them from others for greater contrast
 
   # Base Colors
-  focusBorder: *COMMENT                                                         # Overall border color for focused elements. This color is only used if not overridden by a component
+  focusBorder: *JSGLUE                                                          # Overall border color for focused elements. This color is only used if not overridden by a component
   foreground: *FG                                                               # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow:                                                                # Shadow color of widgets such as Find/Replace inside the editor
   selection.background: *PURPLE                                                 # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED                                                         # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
-  button.background: *SELECTION                                                 # Button background color
-  button.foreground: *FG                                                        # Button foreground color
-  button.border:                                                                # Button border color
+  button.background: *JSDGREY                                                   # Button background color
+  button.foreground: *WHITE                                                     # Button foreground color
+  button.border: *JSGLUE                                                        # Button border color
   button.hoverBackground:                                                       # Button background color when hovering
   button.secondaryBackground: *BG                                               # Secondary button background color.
   button.secondaryForeground: *FG                                               # Secondary button foreground color.
@@ -96,14 +101,14 @@ colors:
 
   # Dropdown Control
   dropdown.background: *BGLight                                                 # Dropdown background
-  dropdown.border: *BGDarker                                                    # Dropdown border
+  dropdown.border: *JSGREY                                                      # Dropdown border
   dropdown.foreground: *FG                                                      # Dropdown foreground
 
   # Input Control
   input.background: *BG                                                         # Input box background
   input.foreground: *FG                                                         # Input box foreground
-  input.border: *BGDarker                                                       # Input box border
-  input.placeholderForeground: *COMMENT                                         # Input box foreground color for placeholder text
+  input.border: *JSGREY                                                         # Input box border
+  input.placeholderForeground: *JSLGREY                                         # Input box foreground color for placeholder text
   inputOption.activeBorder: *PURPLE                                             # Border color of activated options in input fields
   inputValidation.infoForeground:                                               # Input validation foreground color for information severity
   inputValidation.infoBackground:                                               # Input validation background color for information severity
@@ -116,20 +121,20 @@ colors:
   inputValidation.errorBorder: *RED                                             # Input validation border color for error severity
 
   # Scroll Bar Control
-  scrollbar.shadow:                                                             # Scroll Bar shadow to indicate that the view is scrolled
+  scrollbar.shadow: *JSDGREY                                                    # Scroll Bar shadow to indicate that the view is scrolled
   scrollbarSlider.activeBackground:                                             # Slider background color when active
   scrollbarSlider.background:                                                   # Slider background color
   scrollbarSlider.hoverBackground:                                              # Slider background color when hovering
 
   # Badge
-  badge.foreground: *FG                                                         # Badge foreground color
-  badge.background: *SELECTION                                                  # Badge background color
+  badge.foreground: *JSBISCUIT                                                  # Badge foreground color
+  badge.background: *JSGLUE                                                     # Badge background color
 
   # Progress Bar
-  progressBar.background: *PINK                                                 # Background color of the progress bar shown for long running operations
+  progressBar.background: *JSGLUE                                               # Background color of the progress bar shown for long running operations
 
   # List & Trees
-  list.activeSelectionBackground: *SELECTION                                    # List/Tree background color for the selected item when the list/tree is active
+  list.activeSelectionBackground: *JSBISCUIT                                    # List/Tree background color for the selected item when the list/tree is active
   list.activeSelectionForeground: *FG                                           # List/Tree foreground color for the selected item when the list/tree is active
   list.dropBackground: *SELECTION                                               # List/Tree drag and drop background when moving items around using the mouse
   list.focusBackground: *LineHighlight                                          # List/Tree background color for the focused item when the list/tree is active
@@ -144,14 +149,14 @@ colors:
 
   # Activity Bar
   activityBar.background: *BGLight                                              # Activity Bar background color
-  activityBar.inactiveForeground: *COMMENT                                      # Activity bar item foreground color when it is inactive
+  activityBar.inactiveForeground: *WHITE                                        # Activity bar item foreground color when it is inactive
   activityBar.dropBackground:                                                   # Drag and drop feedback color for the Activity Bar items
-  activityBar.foreground: *FG                                                   # Activity bar foreground color (for example used for the icons)
+  activityBar.foreground: *JSGLUE                                               # Activity bar foreground color (for example used for the icons)
   activityBar.border:                                                           # Activity Bar border color with the Side Bar
-  activityBar.activeBorder: !alpha [*PINK, 80]                                  # Activity Bar indicator color
-  activityBar.activeBackground: !alpha [*PURPLE, 10]                            # Activity Bar indicator background color
-  activityBarBadge.background: *PINK                                            # Activity notification badge background color
-  activityBarBadge.foreground: *FG                                              # Activity notification badge foreground color
+  activityBar.activeBorder: *JSGLUE                                             # Activity Bar indicator color
+  # activityBar.activeBackground: !alpha [*PURPLE, 10]                          # Activity Bar indicator background color
+  activityBarBadge.background: *JSGLUE                                          # Activity notification badge background color
+  activityBarBadge.foreground: *JSBISCUIT                                       # Activity notification badge foreground color
 
   # Side Bar
   sideBar.background: *BGDark                                                   # Side Bar background color
@@ -160,11 +165,11 @@ colors:
   sideBarTitle.foreground: *FG                                                  # Side Bar title foreground color
   sideBarSectionHeader.background: *BG                                          # Side Bar section header background color
   sideBarSectionHeader.foreground:                                              # Side Bar section header foreground color
-  sideBarSectionHeader.border: *BGDarker                                        # Side bar section header border color
+  sideBarSectionHeader.border: *JSGREY                                          # Side bar section header border color
 
   # Editor Group & Tabs
   editorGroup.background:                                                       # Background color of an editor group. The background color shows up when dragging editor groups around
-  editorGroup.border: *PURPLE                                                   # Color to separate multiple editor groups from each other
+  editorGroup.border: *JSGLUE                                                   # Color to separate multiple editor groups from each other
   editorGroup.dropBackground: *TAB_DROP_BG                                      # Background color when dragging editors around
   editorGroupHeader.noTabsBackground:                                           # Background color of the editor group title header when Tabs are disabled
   editorGroupHeader.tabsBackground: *BGDarker                                   # Background color of the Tabs container
@@ -172,18 +177,18 @@ colors:
   tab.activeBackground: *BG                                                     # Active Tab background color
   tab.activeForeground: *FG                                                     # Active Tab foreground color in an active group
   tab.border: *BGDarker                                                         # Border to separate Tabs from each other
-  tab.activeBorderTop: !alpha [*PINK, 80]                                       # A border drawn to the top of the active tab
+  tab.activeBorderTop: !alpha [*JSGLUE, 80]                                     # A border drawn to the top of the active tab
   tab.activeBorder:                                                             # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder:                                                    # A border drawn to the bottom of the active tab in an editor group that is not focused
   tab.inactiveBackground: *BGDark                                               # Inactive Tab background color
-  tab.inactiveForeground: *COMMENT                                              # Inactive Tab foreground color in an active group
+  tab.inactiveForeground: *JSLGREY                                              # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground:                                                # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground:                                              # Inactive tab foreground color in an inactive editor group
 
   # Editor Colors
   editor.foreground: *FG
   editor.background: *BG
-  editorLineNumber.foreground: *COMMENT
+  editorLineNumber.foreground: *JSLGREY
   editorCursor.foreground:
 
   editor.selectionBackground: *SELECTION                                        # Color of the editor selection
@@ -216,7 +221,7 @@ colors:
   editorIndentGuide.activeBackground: !alpha [ *WHITE, 45]                      # Color of the active indentation guide
   editorRuler.foreground: *NonText                                              # Color of the editor rulers
 
-  editorCodeLens.foreground: *COMMENT                                           # Foreground color of an editor CodeLens
+  editorCodeLens.foreground: *WHITE                                             # Foreground color of an editor CodeLens (little text above actions in editor)
 
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
@@ -278,8 +283,8 @@ colors:
   editorSuggestWidget.highlightForeground:                                      # Color of the match highlights in the suggestion widget
   editorSuggestWidget.selectedBackground: *SELECTION                            # Background color of the selected entry in the suggestion widget
 
-  editorHoverWidget.background: *BG                                             # Background color of the editor hover
-  editorHoverWidget.border: *COMMENT                                            # Border color of the editor hover
+  editorHoverWidget.background: *JSBISCUIT                                      # Background color of the editor hover
+  editorHoverWidget.border: *JSGREY                                             # Border color of the editor hover
 
   debugExceptionWidget.background:                                              # Exception widget background color
   debugExceptionWidget.border:                                                  # Exception widget border color
@@ -300,7 +305,7 @@ colors:
   peekViewResult.selectionBackground: *SELECTION                                # Background color of the selected entry in the peek view result list
   peekViewResult.selectionForeground: *FG                                       # Foreground color of the selected entry in the peek view result list
   peekViewTitle.background: *BGDarker                                           # Background color of the peek view title area
-  peekViewTitleDescription.foreground: *COMMENT                                 # Color of the peek view title info
+  peekViewTitleDescription.foreground: *JSLGREY                                 # Color of the peek view title info
   peekViewTitleLabel.foreground: *FG                                            # Color of the peek view title
 
   # Merge Conflicts
@@ -314,10 +319,10 @@ colors:
 
   # Panel Colors
   panel.background: *BG                                                         # Panel background color
-  panel.border: *PURPLE                                                         # Panel border color on the top separating to the editor
-  panelTitle.activeBorder: *PINK                                                # Border color for the active panel title
+  panel.border: *JSGREY                                                         # Panel border color on the top separating to the editor
+  panelTitle.activeBorder: *JSGLUE                                              # Border color for the active panel title
   panelTitle.activeForeground: *FG                                              # Title color for the active panel
-  panelTitle.inactiveForeground: *COMMENT                                       # Title color for the inactive panel
+  panelTitle.inactiveForeground: *JSLGREY                                       # Title color for the inactive panel
 
   # Status Bar Colors
   statusBar.background: *BGDarker                                               # Standard Status Bar background color
@@ -335,10 +340,10 @@ colors:
   statusBar.border:
 
   # Title Bar Colors (MacOS Only)
-  titleBar.activeBackground: *BGDark                                            # Title Bar background when the window is active
+  titleBar.activeBackground: *BGLight                                           # Title Bar background when the window is active
   titleBar.activeForeground: *FG                                                # Title Bar foreground when the window is active
-  titleBar.inactiveBackground: *BGDarker                                        # Title Bar background when the window is inactive
-  titleBar.inactiveForeground: *COMMENT                                         # Title Bar foreground when the window is inactive
+  titleBar.inactiveBackground: *BGLight                                         # Title Bar background when the window is inactive
+  titleBar.inactiveForeground: *JSLGREY                                         # Title Bar foreground when the window is inactive
 
   # Extensions
   extensionButton.prominentForeground: *FG                                      # Extension view button foreground color (for example Install button)
@@ -375,11 +380,11 @@ colors:
   settings.numberInputBorder:          *BGDarker                                # Number input box border
 
   # Breadcrumbs
-  breadcrumb.foreground: *COMMENT                                               # Color of breadcrumb items
+  breadcrumb.foreground: *WHITE                                                 # Color of breadcrumb items
   breadcrumb.background: *BG
   breadcrumb.focusForeground: *FG                                               # Color of focused breadcrumb items
   breadcrumb.activeSelectionForeground: *FG                                     # Color of selected breadcrumb items
-  breadcrumbPicker.background: *BGDarker                                        # Background color of breadcrumb item picker
+  breadcrumbPicker.background: *BGLight                                         # Background color of breadcrumb item picker
 
   # Misc
   menu.separatorBackground:                                                     # Color of a separator menu item in menus

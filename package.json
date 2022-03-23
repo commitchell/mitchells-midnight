@@ -1,10 +1,10 @@
-{
-	"name": "theme-dracula",
+{ 
+	"name": "theme-mitchells-dracula",
 	"version": "2.24.2",
-	"displayName": "Dracula Official",
-	"homepage": "https://draculatheme.com/",
-	"description": "Official Dracula Theme. A dark theme for many editors, shells, and more.",
-	"publisher": "dracula-theme",
+	"displayName": "Mitchell's Dracula",
+	"homepage": "https://jaffascript.me/",
+	"description": "Based on Dracula by Zeno Rocha",
+	"publisher": "jaffascript",
 	"license": "MIT",
 	"scripts": {
 		"build": "node ./scripts/build.js",
@@ -14,22 +14,11 @@
 		"vsce-publish": "vsce publish"
 	},
 	"maintainers": [
-		"Derek P Sifford <dereksifford@gmail.com>"
-	],
-	"contributors": [
-		"Krzysztof Wisznarewski",
-		"Daniel Ramos",
-		"Eric Jackson",
-		"Elliott Pogue",
-		"Ajit Singh",
-		"Teddy Bradford"
+		"Mitchell Simpson <hello@jaffascript.me>"
 	],
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/dracula/visual-studio-code.git"
-	},
-	"bugs": {
-		"url": "https://github.com/dracula/visual-studio-code/issues"
+		"url": "https://github.com/jaffascript/visual-studio-code.git"
 	},
 	"engines": {
 		"vscode": "^1.13.0"
@@ -51,14 +40,9 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Dracula",
+				"label": "Mitchell's Dracula",
 				"uiTheme": "vs-dark",
-				"path": "./theme/dracula.json"
-			},
-			{
-				"label": "Dracula Soft",
-				"uiTheme": "vs-dark",
-				"path": "./theme/dracula-soft.json"
+				"path": "./theme/mitchells-dracula.json"
 			}
 		]
 	},
@@ -69,8 +53,8 @@
 		"vsce": "^2.7.0"
 	},
 	"__metadata": {
-		"id": "4e44877c-1c8d-4f9c-ba86-1372d0fbeeb1",
-		"publisherDisplayName": "Dracula Theme",
-		"publisherId": "fbb3d024-f8f2-460c-bdb5-99552f6d8c4b"
+		"id": "",
+		"publisherDisplayName": "jaffascript",
+		"publisherId": ""
 	}
 }
