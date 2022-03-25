@@ -1,9 +1,9 @@
-{ 
+{
 	"name": "theme-mitchells-dracula",
 	"version": "2.24.2",
 	"displayName": "Mitchell's Dracula",
 	"homepage": "https://jaffascript.me/",
-	"description": "Based on Dracula by Zeno Rocha",
+	"description": "Fork of Dracula by Zeno Rocha, and with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
 	"publisher": "jaffascript",
 	"license": "MIT",
 	"scripts": {
@@ -16,25 +16,15 @@
 	"maintainers": [
 		"Mitchell Simpson <hello@jaffascript.me>"
 	],
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/jaffascript/visual-studio-code.git"
-	},
 	"engines": {
 		"vscode": "^1.13.0"
 	},
 	"categories": [
 		"Themes"
 	],
-	"keywords": [
-		"dracula",
-		"dark",
-		"theme",
-		"color-theme"
-	],
-	"icon": "icon.png",
+	"icon": "mitchellsdracula.png",
 	"galleryBanner": {
-		"color": "#3c4557",
+		"color": "#00E49D",
 		"theme": "dark"
 	},
 	"contributes": {
@@ -51,10 +41,5 @@
 		"prettier": "^2.6.0",
 		"tinycolor2": "^1.4.2",
 		"vsce": "^2.7.0"
-	},
-	"__metadata": {
-		"id": "",
-		"publisherDisplayName": "jaffascript",
-		"publisherId": ""
 	}
 }
