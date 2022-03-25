@@ -1,9 +1,9 @@
 $schema: vscode://schemas/color-theme
-name: Mitchell's Dracula
-author: Mitchell Simpson (Based on Dracula by Zeno Rocha)
+name: Mitchell's Midnight
+author: Mitchell Simpson
 maintainers:
   - Mitchell Simpson <hello@jaffascript.me>
-semanticClass: theme.mitchells-dracula
+semanticClass: theme.mitchells-midnight
 semanticHighlighting: true
 dracula:
   base:

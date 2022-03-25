@@ -1,15 +1,15 @@
 {
-	"name": "theme-mitchells-dracula",
+	"name": "theme-mitchells-midnight",
 	"version": "1.0.0",
-	"displayName": "Mitchell's Dracula",
+	"displayName": "Mitchell's Midnight",
 	"homepage": "https://jaffascript.me/",
-	"description": "Fork of Dracula by Zeno Rocha, and with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
+	"description": "Fork of Dracula, with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
 	"publisher": "jaffascript",
 	"license": "MIT",
 	"scripts": {
 		"build": "node ./scripts/build.js",
 		"lint": "node ./scripts/lint.js",
-		"package": "vsce package -o ./bin/dracula.vsix",
+		"package": "vsce package -o ./bin/midnight.vsix",
 		"vscode:prepublish": "npm run build",
 		"vsce-publish": "vsce publish"
 	},
@@ -22,7 +22,11 @@
 	"categories": [
 		"Themes"
 	],
-	"icon": "mitchellsdracula.png",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/JaffaScript/Mitchell-s-Midnight"
+	},
+	"icon": "mitchellsmidnight.png",
 	"galleryBanner": {
 		"color": "#00E49D",
 		"theme": "dark"
@@ -30,9 +34,9 @@
 	"contributes": {
 		"themes": [
 			{
-				"label": "Mitchell's Dracula",
+				"label": "Mitchell's Midnight",
 				"uiTheme": "vs-dark",
-				"path": "./theme/mitchells-dracula.json"
+				"path": "./theme/mitchells-midnight.json"
 			}
 		]
 	},

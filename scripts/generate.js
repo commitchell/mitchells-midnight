@@ -56,7 +56,7 @@ const transformSoft = theme => {
 
 module.exports = async () => {
     const yamlFile = await readFile(
-        join(__dirname, '..', 'src', 'dracula.yml'),
+        join(__dirname, '..', 'src', 'midnight.yml'),
         'utf-8'
     );
 
