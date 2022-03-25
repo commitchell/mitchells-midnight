@@ -28,7 +28,7 @@
 	},
 	"icon": "mitchellsmidnight.png",
 	"galleryBanner": {
-		"color": "#060C0C",
+		"color": "#181818",
 		"theme": "dark"
 	},
 	"contributes": {
