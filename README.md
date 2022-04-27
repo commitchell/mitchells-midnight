@@ -1,4 +1,4 @@
-A highly functional, colourful, comfortable dark theme.
+A highly functional, colourful, comfortable dark theme for Visual Studio Code.
 
 ![visual](mockup.png "visual")
 
