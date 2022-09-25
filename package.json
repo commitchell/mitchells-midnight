@@ -2,9 +2,9 @@
     "name": "theme-mitchells-midnight",
     "version": "1.0.4",
     "displayName": "Mitchell's Midnight",
-    "homepage": "https://jaffascript.me/",
+    "homepage": "https://commitchell.com/",
     "description": "Fork of Dracula, with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
-    "publisher": "jaffascript",
+    "publisher": "commitchell",
     "license": "MIT",
     "scripts": {
         "build": "node ./scripts/build.js",
@@ -14,7 +14,7 @@
         "vsce-publish": "vsce publish"
     },
     "maintainers": [
-        "Mitchell Simpson <hello@jaffascript.me>"
+        "Mitchell Simpson <hello@commitchell.com>"
     ],
     "engines": {
         "vscode": "^1.13.0"
@@ -24,7 +24,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/JaffaScript/mitchells-midnight"
+        "url": "https://github.com/commitchell/mitchells-midnight"
     },
     "icon": "mitchellsmidnight.png",
     "galleryBanner": {

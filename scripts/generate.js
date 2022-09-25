@@ -13,7 +13,7 @@ const tinycolor = require('tinycolor2');
 
 /**
  * @typedef {Object} Theme - Parsed theme object.
- * @prop {Record<'base'|'ansi'|'brightOther'|'other', string[]>} dracula - Dracula color variables.
+ * @prop {Record<'base'|'brightOther'|'other', string[]>} dracula - Dracula color variables.
  * @prop {Record<string, string|null|undefined>} colors - VSCode color mapping.
  * @prop {TokenColor[]} tokenColors - Textmate token colors.
  */
@@ -34,10 +34,10 @@ const schema = DEFAULT_SCHEMA.extend([withAlphaType]);
  * Soft variant transform.
  * @type {ThemeTransform}
  */
-const transformSoft = theme => {
+const transformSoft = (theme) => {
     /** @type {Theme} */
     const soft = JSON.parse(JSON.stringify(theme));
-    const brightColors = [...soft.dracula.ansi, ...soft.dracula.brightOther];
+    const brightColors = [...soft.dracula.brightOther];
     for (const key of Object.keys(soft.colors)) {
         if (brightColors.includes(soft.colors[key])) {
             soft.colors[key] = tinycolor(soft.colors[key])
@@ -47,10 +47,12 @@ const transformSoft = theme => {
     }
     soft.tokenColors = soft.tokenColors.map((value) => {
         if (brightColors.includes(value.settings.foreground)) {
-            value.settings.foreground = tinycolor(value.settings.foreground).desaturate(20).toHexString();
+            value.settings.foreground = tinycolor(value.settings.foreground)
+                .desaturate(20)
+                .toHexString();
         }
         return value;
-    })
+    });
     return soft;
 };
 

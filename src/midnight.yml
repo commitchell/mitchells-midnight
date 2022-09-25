@@ -2,54 +2,33 @@ $schema: vscode://schemas/color-theme
 name: Mitchell's Midnight
 author: Mitchell Simpson
 maintainers:
-  - Mitchell Simpson <hello@jaffascript.me>
+  - Mitchell Simpson <hello@commitchell.com>
 semanticClass: theme.mitchells-midnight
 semanticHighlighting: true
 dracula:
   base:
     # UI
     - &BG '#1E1E1E'
-    - &JSGLUE '#00E59D'
-    - &JSWHITE '#E8E8E8'
-    - &JSLGREY '#BDBDBD'
-    - &JSGREY '#3D3D3D'
-    - &JSDGREY '#181818'
-    - &JSBISCUIT '#060C0C'
-    # SYNTAX
-    # - &COMMENT   '#6272A4'
-    # - &CYAN      '#8BE9FD'
-    # - &GREEN     '#50FA7B'
-    # - &ORANGE    '#FFB86C'
-    # - &PINK      '#FF79C6'
-    # - &PURPLE    '#BD93F9'
-    # - &RED       '#FF5555'
-    # - &YELLOW    '#F1FA8C'
+    - &GLUE '#00E59D'
+    - &WHITE '#E8E8E8'
+    - &LGREY '#BDBDBD'
+    - &GREY '#3D3D3D'
+    - &DGREY '#181818'
+    - &BISCUIT '#060C0C'
     - &COMMENT '#6272a4'
     - &CYAN '#78bae0'
+    - &ULTRACYAN '#66D9EF'
     - &GREEN '#80d394'
+    - &ULTRAGREEN '#00E59D'
     - &ORANGE '#eeb375'
     - &PINK '#e289bc'
+    - &ULTRAPINK '#FF92DF'
     - &PURPLE '#be9af0'
-    - &RED '#FF5555'
+    - &ULTRAPURPLE '#D6ACFF'
+    - &RED '#FF6E6E'
+    - &ULTRARED '#FF5555'
     - &YELLOW '#e2eb86'
-    - &ULTRACYAN '#66D9EF'
-  ansi:
-    - &COLOR0 '#21222C'
-    - &COLOR1 '#FF5555'
-    - &COLOR2 '#80d394'
-    - &COLOR3 '#e2eb86'
-    - &COLOR4 '#be9af0'
-    - &COLOR5 '#e289bc'
-    - &COLOR6 '#78bae0'
-    - &COLOR7 '#E8E8E8'
-    - &COLOR8 '#6272A4'
-    - &COLOR9 '#FF6E6E'
-    - &COLOR10 '#69FF94'
-    - &COLOR11 '#FFFFA5'
-    - &COLOR12 '#D6ACFF'
-    - &COLOR13 '#FF92DF'
-    - &COLOR14 '#A4FFFF'
-    - &COLOR15 '#FFFFFF'
+    - &ULTRAYELLOW '#FFFFA5'
   brightOther:
     # Temporary (awaiting fix)
     - &TEMP_QUOTES '#eeb375'
@@ -60,60 +39,61 @@ dracula:
 # User Interface (more info: https://code.visualstudio.com/docs/getstarted/theme-color-reference)
 colors:
   # Link colors
-  textLink.foreground: *JSGLUE
-  textLink.activeForeground: *JSGLUE
+  textLink.foreground: *GLUE
+  textLink.activeForeground: *GLUE
 
   # Integrated Terminal Colors
-  terminal.background: *BG
-  terminal.foreground: *JSWHITE
-  terminal.ansiBrightBlack: *COLOR8
-  terminal.ansiBrightRed: *COLOR9
-  terminal.ansiBrightGreen: *COLOR10
-  terminal.ansiBrightYellow: *COLOR11
-  terminal.ansiBrightBlue: *COLOR12
-  terminal.ansiBrightMagenta: *COLOR13
-  terminal.ansiBrightCyan: *COLOR14
-  terminal.ansiBrightWhite: *COLOR15
-  terminal.ansiBlack: *COLOR0
-  terminal.ansiRed: *COLOR1
-  terminal.ansiGreen: *COLOR2
-  terminal.ansiYellow: *COLOR3
-  terminal.ansiBlue: *COLOR4
-  terminal.ansiMagenta: *COLOR5
-  terminal.ansiCyan: *COLOR6
-  terminal.ansiWhite: *COLOR7
+  terminal.border: *DGREY
+  terminal.background: '#000000'
+  terminal.foreground: *WHITE
+  terminal.ansiBrightBlack: *DGREY
+  terminal.ansiBrightRed: *ULTRARED
+  terminal.ansiBrightGreen: *ULTRAGREEN
+  terminal.ansiBrightYellow: *ULTRAYELLOW
+  terminal.ansiBrightBlue: *ULTRAPURPLE
+  terminal.ansiBrightMagenta: *ULTRAPINK
+  terminal.ansiBrightCyan: *ULTRACYAN
+  terminal.ansiBrightWhite: *WHITE
+  terminal.ansiBlack: *BISCUIT
+  terminal.ansiRed: *RED
+  terminal.ansiGreen: *GREEN
+  terminal.ansiYellow: *YELLOW
+  terminal.ansiBlue: *PURPLE
+  terminal.ansiMagenta: *PINK
+  terminal.ansiCyan: *CYAN
+  terminal.ansiWhite: *LGREY
 
   # Contrast Colors
   contrastBorder: # An extra border around elements to separate them from others for greater contrast
   contrastActiveBorder: # An extra border around active elements to separate them from others for greater contrast
 
   # Base Colors
-  focusBorder: *JSGLUE # Overall border color for focused elements. This color is only used if not overridden by a component
-  foreground: *JSWHITE # Overall foreground color. This color is only used if not overridden by a component
+  focusBorder: *GLUE # Overall border color for focused elements. This color is only used if not overridden by a component
+  foreground: *WHITE # Overall foreground color. This color is only used if not overridden by a component
   widget.shadow: # Shadow color of widgets such as Find/Replace inside the editor
-  selection.background: !alpha [*JSLGREY, 90] # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
+  selection.background: !alpha [*LGREY, 90] # Background color of text selections in the workbench (for input fields or text areas, does not apply to selections within the editor and the terminal)
   errorForeground: *RED # Overall foreground color for error messages (this color is only used if not overridden by a component)
 
   # Button Control
-  button.background: *JSGREY # Button background color
-  button.foreground: *JSWHITE # Button foreground color
+  button.background: *GREY # Button background color
+  button.foreground: *WHITE # Button foreground color
   button.border: # Button border color
   button.hoverBackground: # Button background color when hovering
   button.secondaryBackground: *BG # Secondary button background color.
-  button.secondaryForeground: *JSWHITE # Secondary button foreground color.
-  button.secondaryHoverBackground: *JSBISCUIT # Secondary button background color when hovering.
+  button.secondaryForeground: *WHITE # Secondary button foreground color.
+  button.secondaryHoverBackground: *BISCUIT # Secondary button background color when hovering.
 
   # Dropdown Control
   dropdown.background: *BG # Dropdown background
-  dropdown.border: *JSGREY # Dropdown border
-  dropdown.foreground: *JSWHITE # Dropdown foreground
+  dropdown.border: *GREY # Dropdown border
+  dropdown.foreground: *WHITE # Dropdown foreground
 
   # Input Control
   input.background: *TRANS # Input box background
-  input.foreground: *JSWHITE # Input box foreground
-  input.border: *JSGREY # Input box border
-  input.placeholderForeground: *JSLGREY # Input box foreground color for placeholder text
-  inputOption.activeBorder: *JSGLUE # Border color of activated options in input fields
+  input.foreground: *WHITE # Input box foreground
+  input.border: *GREY # Input box border
+  input.placeholderForeground: *LGREY # Input box foreground color for placeholder text
+  inputOption.activeBorder: *GLUE # Border color of activated options in input fields
   inputValidation.infoForeground: # Input validation foreground color for information severity
   inputValidation.infoBackground: # Input validation background color for information severity
   inputValidation.infoBorder: *PINK # Input validation border color for information severity
@@ -125,108 +105,108 @@ colors:
   inputValidation.errorBorder: *RED # Input validation border color for error severity
 
   # Scroll Bar Control
-  scrollbar.shadow: *JSDGREY # Scroll Bar shadow to indicate that the view is scrolled
+  scrollbar.shadow: *DGREY # Scroll Bar shadow to indicate that the view is scrolled
   scrollbarSlider.activeBackground: # Slider background color when active
   scrollbarSlider.background: # Slider background color
   scrollbarSlider.hoverBackground: # Slider background color when hovering
 
   # Badge
-  badge.foreground: *JSBISCUIT # Badge foreground color
-  badge.background: *JSGLUE # Badge background color
+  badge.foreground: *BISCUIT # Badge foreground color
+  badge.background: *GLUE # Badge background color
 
   # Progress Bar
-  progressBar.background: *JSGLUE # Background color of the progress bar shown for long running operations
+  progressBar.background: *GLUE # Background color of the progress bar shown for long running operations
 
   # List & Trees
-  list.activeSelectionBackground: *JSGREY # List/Tree background color for the selected item when the list/tree is active
-  list.activeSelectionForeground: *JSWHITE # List/Tree foreground color for the selected item when the list/tree is active
-  list.dropBackground: *JSGREY # List/Tree drag and drop background when moving items around using the mouse
-  list.focusBackground: *JSGREY # List/Tree background color for the focused item when the list/tree is active
+  list.activeSelectionBackground: *GREY # List/Tree background color for the selected item when the list/tree is active
+  list.activeSelectionForeground: *WHITE # List/Tree foreground color for the selected item when the list/tree is active
+  list.dropBackground: *GREY # List/Tree drag and drop background when moving items around using the mouse
+  list.focusBackground: *GREY # List/Tree background color for the focused item when the list/tree is active
   list.highlightForeground: *CYAN # List/Tree foreground color of the match highlights when searching inside the list/tree
-  list.hoverBackground: *JSGREY # List/Tree background when hovering over items using the mouse
-  list.inactiveSelectionBackground: *JSGREY # List/Tree background color for the selected item when the list/tree is inactive
-  list.inactiveSelectionForeground: *JSWHITE # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
+  list.hoverBackground: *BG # List/Tree background when hovering over items using the mouse
+  list.inactiveSelectionBackground: *GREY # List/Tree background color for the selected item when the list/tree is inactive
+  list.inactiveSelectionForeground: *WHITE # List/Tree foreground color for the selected item when the list/tree is inactive. An active list/tree has keyboard focus, an inactive does not
   list.warningForeground: *ORANGE # Color of warning decorations in the explorer
   list.errorForeground: *RED # Color of error decorations in the explorer
   list.hoverForeground: # List/Tree foreground when hovering over items using the mouse
   list.focusForeground: # List/Tree foreground color for the focused item when the list/tree is active. An active list/tree has keyboard focus, an inactive does not
 
   # Activity Bar
-  activityBar.background: *JSBISCUIT # Activity Bar background color
-  activityBar.inactiveForeground: *JSWHITE # Activity bar item foreground color when it is inactive
+  activityBar.background: *BISCUIT # Activity Bar background color
+  activityBar.inactiveForeground: *WHITE # Activity bar item foreground color when it is inactive
   activityBar.dropBackground: # Drag and drop feedback color for the Activity Bar items
-  activityBar.foreground: *JSGLUE # Activity bar foreground color (for example used for the icons)
+  activityBar.foreground: *GLUE # Activity bar foreground color (for example used for the icons)
   activityBar.border: # Activity Bar border color with the Side Bar
-  activityBar.activeBorder: *JSGLUE # Activity Bar indicator color
+  activityBar.activeBorder: *GLUE # Activity Bar indicator color
   # activityBar.activeBackground: !alpha [*PURPLE, 10]                          # Activity Bar indicator background color
-  activityBarBadge.background: *JSGLUE # Activity notification badge background color
-  activityBarBadge.foreground: *JSBISCUIT # Activity notification badge foreground color
+  activityBarBadge.background: *GLUE # Activity notification badge background color
+  activityBarBadge.foreground: *BISCUIT # Activity notification badge foreground color
 
   # Side Bar
-  sideBar.background: *JSDGREY # Side Bar background color
-  sideBar.foreground: *JSLGREY # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
+  sideBar.background: *DGREY # Side Bar background color
+  sideBar.foreground: *LGREY # Side Bar foreground color. The Side Bar is the container for views like Explorer and Search
   sideBar.border: # Side Bar border color on the side separating the editor
-  sideBarTitle.foreground: *JSWHITE # Side Bar title foreground color
+  sideBarTitle.foreground: *WHITE # Side Bar title foreground color
   sideBarSectionHeader.background: *BG # Side Bar section header background color
-  sideBarSectionHeader.foreground: *JSWHITE # Side Bar section header foreground color
-  sideBarSectionHeader.border: *JSGREY # Side bar section header border color
+  sideBarSectionHeader.foreground: *WHITE # Side Bar section header foreground color
+  sideBarSectionHeader.border: *GREY # Side bar section header border color
 
   # Editor Group & Tabs
   editorGroup.background: # Background color of an editor group. The background color shows up when dragging editor groups around
-  editorGroup.border: *JSGREY # Color to separate multiple editor groups from each other
-  editorGroup.dropBackground: !alpha [*JSLGREY, 30] # Background color when dragging editors around
+  editorGroup.border: *GREY # Color to separate multiple editor groups from each other
+  editorGroup.dropBackground: !alpha [*LGREY, 30] # Background color when dragging editors around
   editorGroupHeader.noTabsBackground: # Background color of the editor group title header when Tabs are disabled
-  editorGroupHeader.tabsBackground: *JSDGREY # Background color of the Tabs container
+  editorGroupHeader.tabsBackground: *DGREY # Background color of the Tabs container
   editorGroupHeader.tabsBorder: # Border color of the editor group title header when tabs are enabled. Editor groups are the containers of editors
   tab.activeBackground: *BG # Active Tab background color
-  tab.activeForeground: *JSWHITE # Active Tab foreground color in an active group
-  tab.border: *JSDGREY # Border to separate Tabs from each other
-  tab.activeBorderTop: !alpha [*JSGLUE, 80] # A border drawn to the top of the active tab
+  tab.activeForeground: *WHITE # Active Tab foreground color in an active group
+  tab.border: *DGREY # Border to separate Tabs from each other
+  tab.activeBorderTop: !alpha [*GLUE, 80] # A border drawn to the top of the active tab
   tab.activeBorder: # A border drawn to the bottom of the active tab
   tab.unfocusedActiveBorder: # A border drawn to the bottom of the active tab in an editor group that is not focused
-  tab.inactiveBackground: *JSDGREY # Inactive Tab background color
-  tab.inactiveForeground: *JSLGREY # Inactive Tab foreground color in an active group
+  tab.inactiveBackground: *DGREY # Inactive Tab background color
+  tab.inactiveForeground: *LGREY # Inactive Tab foreground color in an active group
   tab.unfocusedActiveForeground: # Active tab foreground color in an inactive editor group
   tab.unfocusedInactiveForeground: # Inactive tab foreground color in an inactive editor group
 
   # Editor Colors
-  editor.foreground: *JSWHITE
+  editor.foreground: *WHITE
   editor.background: *BG
-  editorLineNumber.foreground: *JSLGREY
-  editorLineNumber.activeForeground: *JSGLUE
-  editorCursor.foreground: *JSGLUE
+  editorLineNumber.foreground: *LGREY
+  editorLineNumber.activeForeground: *GLUE
+  editorCursor.foreground: *GLUE
 
-  editor.selectionBackground: !alpha [*JSGREY, 90] # Color of the editor selection
-  editor.selectionHighlightBackground: !alpha [*JSGLUE, 40] # Color for regions with the same content as the selection
+  editor.selectionBackground: !alpha [*GREY, 90] # Color of the editor selection
+  editor.selectionHighlightBackground: !alpha [*GLUE, 40] # Color for regions with the same content as the selection
   editor.inactiveSelectionBackground: # Color of the selection in an inactive editor
-  editor.foldBackground: !alpha [*JSDGREY, 80] # Background color for folded ranges
+  editor.foldBackground: !alpha [*DGREY, 80] # Background color for folded ranges
 
   editor.wordHighlightBackground: !alpha [*CYAN, 50] # Background color of a symbol during read-access, for example when reading a variable
   editor.wordHighlightStrongBackground: !alpha [*GREEN, 50] # Background color of a symbol during write-access, for example when writing to a variable
 
   editor.findMatchBackground: !alpha [*ORANGE, 80]
-  editor.findMatchHighlightBackground: !alpha [*JSWHITE, 40] # Color of the other search matches
-  editor.findRangeHighlightBackground: *JSGREY # Color the range limiting the search
+  editor.findMatchHighlightBackground: !alpha [*WHITE, 40] # Color of the other search matches
+  editor.findRangeHighlightBackground: *GREY # Color the range limiting the search
 
   editor.hoverHighlightBackground: !alpha [*CYAN, 50] # Highlight below the word for which a hover is shown
 
-  editor.JSGREYBackground: # Background color for the highlight of line at the cursor position
-  editor.JSGREYBorder: *JSGREY # Background color for the border around the line at the cursor position
+  editor.GREYBackground: # Background color for the highlight of line at the cursor position
+  editor.GREYBorder: *GREY # Background color for the border around the line at the cursor position
 
   editorLink.activeForeground: *CYAN # Color of active links
   editor.rangeHighlightBackground: !alpha [*PURPLE, 15] # Background color of highlighted ranges, like by Quick Open and Find features
 
   editor.snippetTabstopHighlightBackground: *BG # Highlight background color of a snippet tabstop
-  editor.snippetTabstopHighlightBorder: *JSGREY # Highlight border color of a snippet tabstop
+  editor.snippetTabstopHighlightBorder: *GREY # Highlight border color of a snippet tabstop
   editor.snippetFinalTabstopHighlightBackground: *BG # Highlight background color of the final tabstop of a snippet
   editor.snippetFinalTabstopHighlightBorder: *GREEN # Highlight border color of the final tabstop of a snippet
 
-  editorWhitespace.foreground: *JSGREY # Color of whitespace characters in the editor
-  editorIndentGuide.background: *JSGREY # Color of the editor indentation guides
-  editorIndentGuide.activeBackground: !alpha [*JSWHITE, 45] # Color of the active indentation guide
-  editorRuler.foreground: *JSGREY # Color of the editor rulers
+  editorWhitespace.foreground: *GREY # Color of whitespace characters in the editor
+  editorIndentGuide.background: *GREY # Color of the editor indentation guides
+  editorIndentGuide.activeBackground: !alpha [*WHITE, 45] # Color of the active indentation guide
+  editorRuler.foreground: *GREY # Color of the editor rulers
 
-  editorCodeLens.foreground: *JSWHITE # Foreground color of an editor CodeLens (little text above actions in editor)
+  editorCodeLens.foreground: *WHITE # Foreground color of an editor CodeLens (little text above actions in editor)
 
   # NOTE: These are not set because they tend to be highly contested from
   # person to person. Thus, setting these is probably better suited
@@ -234,7 +214,7 @@ colors:
   editorBracketMatch.background: # Background color behind matching brackets
   editorBracketMatch.border: # Color for matching brackets boxes
 
-  # editorBracketHighlight.foreground1: *JSWHITE                                  # Color of first pair of brackets
+  # editorBracketHighlight.foreground1: *WHITE                                  # Color of first pair of brackets
   # editorBracketHighlight.foreground2: *PINK                                     # Color of second pair of brackets
   # editorBracketHighlight.foreground3: *CYAN                                     # Color of third pair of brackets
   # editorBracketHighlight.foreground4: *GREEN                                    # Color of fourth pair of brackets
@@ -242,7 +222,7 @@ colors:
   # editorBracketHighlight.foreground6: *ORANGE                                   # Color of sixth pair of brackets
   editorBracketHighlight.unexpectedBracket.foreground: *RED # Color of bracket matching error
 
-  editorOverviewRuler.border: *JSDGREY # Color of the overview ruler border
+  editorOverviewRuler.border: *DGREY # Color of the overview ruler border
   editorOverviewRuler.findMatchForeground:
   editorOverviewRuler.rangeHighlightForeground:
   editorOverviewRuler.selectionHighlightForeground: *ORANGE
@@ -269,7 +249,7 @@ colors:
   gitDecoration.modifiedResourceForeground: *CYAN
   gitDecoration.deletedResourceForeground: *RED
   gitDecoration.untrackedResourceForeground: *GREEN
-  gitDecoration.ignoredResourceForeground: !alpha [*JSWHITE, 80]
+  gitDecoration.ignoredResourceForeground: !alpha [*WHITE, 80]
   gitDecoration.conflictingResourceForeground: *ORANGE
 
   # Diff Editor Colors
@@ -279,40 +259,40 @@ colors:
   diffEditor.removedTextBorder: # Outline color for removed text
 
   # Editor Widget Colors
-  editorWidget.background: *JSBISCUIT # Background color of editor widgets, such as Find/Replace
+  editorWidget.background: *BISCUIT # Background color of editor widgets, such as Find/Replace
   editorWidgetBorder: # Border color of the editor widget unless the widget does not contain a border or defines its own border color
-  editorWidget.resizeBorder: *JSGLUE
+  editorWidget.resizeBorder: *GLUE
 
-  editorSuggestWidget.background: *JSBISCUIT # Background color of the suggestion widget
+  editorSuggestWidget.background: *BISCUIT # Background color of the suggestion widget
   editorSuggestWidget.border: # Border color of the suggestion widget
-  editorSuggestWidget.foreground: *JSLGREY # Foreground color of the suggestion widget
-  editorSuggestWidget.highlightForeground: *JSWHITE # Color of the match highlights in the suggestion widget
-  editorSuggestWidget.selectedBackground: *JSGREY # Background color of the selected entry in the suggestion widget
+  editorSuggestWidget.foreground: *LGREY # Foreground color of the suggestion widget
+  editorSuggestWidget.highlightForeground: *WHITE # Color of the match highlights in the suggestion widget
+  editorSuggestWidget.selectedBackground: *GREY # Background color of the selected entry in the suggestion widget
 
-  editorHoverWidget.background: *JSBISCUIT # Background color of the editor hover
-  editorHoverWidget.border: *JSGREY # Border color of the editor hover
+  editorHoverWidget.background: *BISCUIT # Background color of the editor hover
+  editorHoverWidget.border: *GREY # Border color of the editor hover
 
   debugExceptionWidget.background: # Exception widget background color
   debugExceptionWidget.border: # Exception widget border color
 
-  editorMarkerNavigation.background: *JSDGREY # Editor marker navigation widget background
+  editorMarkerNavigation.background: *DGREY # Editor marker navigation widget background
   editorMarkerNavigationError.background: # Editor marker navigation widget error color
   editorMarkerNavigationWarning.background: # Editor marker navigation widget warning color
 
   # Peek View Colors
-  peekView.border: *JSGREY # Color of the peek view borders and arrow
+  peekView.border: *GREY # Color of the peek view borders and arrow
   peekViewEditor.background: *BG # Background color of the peek view editor
   peekViewEditorGutter.background: # Background color of the gutter in the peek view editor
   peekViewEditor.matchHighlightBackground: !alpha [*YELLOW, 80] # Match highlight color in the peek view editor
-  peekViewResult.background: *JSDGREY # Background color of the peek view result list
-  peekViewResult.fileForeground: *JSWHITE # Foreground color for file nodes in the peek view result list
-  peekViewResult.lineForeground: *JSWHITE # Foreground color for line nodes in the peek view result list
+  peekViewResult.background: *DGREY # Background color of the peek view result list
+  peekViewResult.fileForeground: *WHITE # Foreground color for file nodes in the peek view result list
+  peekViewResult.lineForeground: *WHITE # Foreground color for line nodes in the peek view result list
   peekViewResult.matchHighlightBackground: !alpha [*YELLOW, 80] # Match highlight color in the peek view result list
-  peekViewResult.selectionBackground: *JSGREY # Background color of the selected entry in the peek view result list
-  peekViewResult.selectionForeground: *JSWHITE # Foreground color of the selected entry in the peek view result list
-  peekViewTitle.background: *JSDGREY # Background color of the peek view title area
-  peekViewTitleDescription.foreground: *JSLGREY # Color of the peek view title info
-  peekViewTitleLabel.foreground: *JSWHITE # Color of the peek view title
+  peekViewResult.selectionBackground: *GREY # Background color of the selected entry in the peek view result list
+  peekViewResult.selectionForeground: *WHITE # Foreground color of the selected entry in the peek view result list
+  peekViewTitle.background: *DGREY # Background color of the peek view title area
+  peekViewTitleDescription.foreground: *LGREY # Color of the peek view title info
+  peekViewTitleLabel.foreground: *WHITE # Color of the peek view title
 
   # Merge Conflicts
   merge.currentHeaderBackground: !alpha [*GREEN, 90] # Current header background in inline merge conflicts
@@ -325,84 +305,97 @@ colors:
 
   # Panel Colors
   panel.background: *BG # Panel background color
-  panel.border: *JSGREY # Panel border color on the top separating to the editor
-  panelTitle.activeBorder: *JSGLUE # Border color for the active panel title
-  panelTitle.activeForeground: *JSWHITE # Title color for the active panel
-  panelTitle.inactiveForeground: *JSLGREY # Title color for the inactive panel
+  panel.border: *GREY # Panel border color on the top separating to the editor
+  panelTitle.activeBorder: *GLUE # Border color for the active panel title
+  panelTitle.activeForeground: *WHITE # Title color for the active panel
+  panelTitle.inactiveForeground: *LGREY # Title color for the inactive panel
+
+  # Notifications
+  notifications.foreground: *LGREY
+  notifications.background: *BG
+  notifications.border: *GREY
+  notifications.buttonBackground: *GREY
+  notifications.buttonForeground: *WHITE
+  notificationToast.border: *GREY
+  notificationCenterHeader.foreground: *WHITE
+  notificationCenterHeader.background: *BISCUIT
+  notificationsErrorIcon.foreground: *RED
+  notificationsWarningIcon.foreground: *YELLOW
+  notificationsInfoIcon.foreground: *CYAN
 
   # Status Bar Colors
-  statusBar.background: *JSDGREY # Standard Status Bar background color
-  statusBar.foreground: *JSWHITE # Status Bar foreground color
+  statusBar.background: *DGREY # Standard Status Bar background color
+  statusBar.foreground: *WHITE # Status Bar foreground color
   statusBar.debuggingBackground: *RED # Status Bar background color when a program is being debugged
-  statusBar.debuggingForeground: *JSDGREY # Status Bar foreground color when a program is being debugged
-  statusBar.noFolderBackground: *JSDGREY # Status Bar foreground color when no folder is opened
-  statusBar.noFolderBorder: *JSGLUE # Status Bar border color when no folder is opened
-  statusBar.noFolderForeground: *JSWHITE # Status Bar background color when no folder is opened
+  statusBar.debuggingForeground: *DGREY # Status Bar foreground color when a program is being debugged
+  statusBar.noFolderBackground: *DGREY # Status Bar foreground color when no folder is opened
+  statusBar.noFolderBorder: *GLUE # Status Bar border color when no folder is opened
+  statusBar.noFolderForeground: *WHITE # Status Bar background color when no folder is opened
   statusBarItem.activeBackground: # Status Bar item background color when clicking
   statusBarItem.hoverBackground: # Status Bar item background color when hovering
   statusBarItem.prominentBackground: *RED # Status Bar prominent items background color. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.prominentHoverBackground: *ORANGE # Status Bar prominent items background color when hovering. Prominent items stand out from other Status Bar entries to indicate importance
   statusBarItem.remoteForeground: *BG # Background color for the remote indicator on the status bar
   statusBarItem.remoteBackground: *PURPLE # Foreground color for the remote indicator on the status bar
-  statusBar.border:
+  #statusBar.border:
+
+  # Debug colors
+  debugToolBar.background: *BISCUIT
 
   # Title Bar Colors (MacOS Only)
-  titleBar.activeBackground: *JSBISCUIT # Title Bar background when the window is active
-  titleBar.activeForeground: *JSWHITE # Title Bar foreground when the window is active
-  titleBar.inactiveBackground: *JSBISCUIT # Title Bar background when the window is inactive
-  titleBar.inactiveForeground: *JSLGREY # Title Bar foreground when the window is inactive
+  titleBar.activeBackground: *BISCUIT # Title Bar background when the window is active
+  titleBar.activeForeground: *WHITE # Title Bar foreground when the window is active
+  titleBar.inactiveBackground: *BISCUIT # Title Bar background when the window is inactive
+  titleBar.inactiveForeground: *LGREY # Title Bar foreground when the window is inactive
 
   # Menu bar colors
-  menubar.selectionBackground: *JSGREY
+  menubar.selectionBackground: *GREY
   menu.separatorBackground: # Color of a separator menu item in menus
-  menu.foreground: *JSWHITE
-  menu.background: *JSBISCUIT
-  menu.selectionBackground: *JSGREY
+  menu.foreground: *WHITE
+  menu.background: *BISCUIT
+  menu.selectionBackground: *GREY
 
   # Extensions
-  extensionButton.prominentForeground: *JSWHITE # Extension view button foreground color (for example Install button)
+  extensionButton.prominentForeground: *WHITE # Extension view button foreground color (for example Install button)
   extensionButton.prominentBackground: !alpha [*GREEN, 90] # Extension view button background color
   extensionButton.prominentHoverBackground: !alpha [*GREEN, 60] # Extension view button background hover color
 
   # Quick Picker
-  pickerGroup.border: *JSGLUE # Quick picker (Quick Open) color for grouping borders
-  pickerGroup.foreground: *JSGLUE # Quick picker (Quick Open) color for grouping labels
-
-  # Debug
-  debugToolBar.background: *JSDGREY # Debug toolbar background color
+  pickerGroup.border: *GLUE # Quick picker (Quick Open) color for grouping borders
+  pickerGroup.foreground: *GLUE # Quick picker (Quick Open) color for grouping labels
 
   # Welcome Page
   welcomePage.buttonBackground: # Background color for the buttons on the Welcome page
   welcomePage.buttonHoverBackground: # Hover background color for the buttons on the Welcome page
-  walkThrough.embeddedEditorBackground: *JSDGREY # Background color for the embedded editors on the Interactive Playground
+  walkThrough.embeddedEditorBackground: *DGREY # Background color for the embedded editors on the Interactive Playground
 
   # Setting Editor
-  settings.headerForeground: *JSWHITE # The foreground color for a section header or active title
+  settings.headerForeground: *WHITE # The foreground color for a section header or active title
   settings.modifiedItemIndicator: *ORANGE # The color of the line that indicates a modified setting
   settings.inactiveSelectedItemBorder: # The color of the selected setting row border, when the settings list does not have focus
   settings.dropdownBackground: *BG # Dropdown background
-  settings.dropdownForeground: *JSWHITE # Dropdown foreground
-  settings.dropdownBorder: *JSGREY # Dropdown border
+  settings.dropdownForeground: *WHITE # Dropdown foreground
+  settings.dropdownBorder: *GREY # Dropdown border
   settings.checkboxBackground: *BG # Checkbox background
-  settings.checkboxForeground: *JSWHITE # Checkbox foreground
-  settings.checkboxBorder: *JSGREY # Checkbox border
+  settings.checkboxForeground: *WHITE # Checkbox foreground
+  settings.checkboxBorder: *GREY # Checkbox border
   settings.textInputBackground: *BG # Text input box background
-  settings.textInputForeground: *JSWHITE # Text input box foreground
-  settings.textInputBorder: *JSGREY # Text input box border
+  settings.textInputForeground: *WHITE # Text input box foreground
+  settings.textInputBorder: *GREY # Text input box border
   settings.numberInputBackground: *BG # Number input box background
-  settings.numberInputForeground: *JSWHITE # Number input box foreground
-  settings.numberInputBorder: *JSGREY # Number input box border
+  settings.numberInputForeground: *WHITE # Number input box foreground
+  settings.numberInputBorder: *GREY # Number input box border
 
   # Breadcrumbs
-  breadcrumb.foreground: *JSWHITE # Color of breadcrumb items
+  breadcrumb.foreground: *WHITE # Color of breadcrumb items
   breadcrumb.background: *BG
-  breadcrumb.focusForeground: *JSWHITE # Color of focused breadcrumb items
-  breadcrumb.activeSelectionForeground: *JSWHITE # Color of selected breadcrumb items
-  breadcrumbPicker.background: *JSBISCUIT # Background color of breadcrumb item picker
+  breadcrumb.focusForeground: *WHITE # Color of focused breadcrumb items
+  breadcrumb.activeSelectionForeground: *WHITE # Color of selected breadcrumb items
+  breadcrumbPicker.background: *BISCUIT # Background color of breadcrumb item picker
 
   # Misc
-  listFilterWidget.background: *JSBISCUIT # Background color of the type filter widget in lists and trees.
-  listFilterWidget.outline: *JSGLUE # Outline color of the type filter widget in lists and trees.
+  listFilterWidget.background: *BISCUIT # Background color of the type filter widget in lists and trees.
+  listFilterWidget.outline: *GLUE # Outline color of the type filter widget in lists and trees.
   listFilterWidget.noMatchesOutline: *RED # Outline color of the type filter widget in lists and trees, when there are no matches.
 
 # Syntaxes
@@ -447,13 +440,13 @@ tokenColors:
       - invalid
     settings:
       background: *PINK
-      foreground: *JSWHITE
+      foreground: *WHITE
       fontStyle: underline italic
   - scope:
       - invalid.deprecated
     settings:
       background: *PURPLE
-      foreground: *JSWHITE
+      foreground: *WHITE
       fontStyle: underline italic
   - scope:
       - entity.name.filename
@@ -565,7 +558,7 @@ tokenColors:
       - meta.paragraph.markdown punctuation.definition.string.begin
       - meta.paragraph.markdown punctuation.definition.string.end
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   - name: Braces in markdown blockquotes
     scope:
@@ -868,7 +861,7 @@ tokenColors:
       - string.template meta.brace
       - string.template punctuation.accessor
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   - name: Variable interpolation operators
     scope:
@@ -884,7 +877,7 @@ tokenColors:
       - punctuation.section.embedded.end source.ruby # Issue with ruby's tmLanguage
       - punctuation.definition.variable.makefile
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   # =============================================================================
   # Serializable / Config Langages
@@ -950,7 +943,7 @@ tokenColors:
   #   - storage.type.ocaml
   #   settings:
   #     fontStyle: italic
-  #     foreground: *JSWHITE
+  #     foreground: *WHITE
 
   - name: Generics, templates, and mapped type declarations
     scope:
@@ -1066,7 +1059,7 @@ tokenColors:
   #   - variable.other.constant.ts  # Fixes incorrect highlighting of pseudo-constants in ts
   #   - variable.other.constant.tsx # Fixes incorrect highlighting of pseudo-constants in tsx
   #   settings:
-  #     foreground: *JSWHITE
+  #     foreground: *WHITE
 
   - name: Destructuring / aliasing reference name (LHS)
     scope:
@@ -1083,7 +1076,7 @@ tokenColors:
       - meta.variable.assignment.destructured.object.coffee variable variable # Object destructuring variable (coffeescript)
     settings:
       fontStyle: normal
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   # =============================================================================
   # Language Extensions / Edge Cases
@@ -1101,7 +1094,7 @@ tokenColors:
     scope:
       - meta.selectionset.graphql meta.arguments variable
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   - name: GraphQL fragment name (definition)
     scope:
@@ -1128,7 +1121,7 @@ tokenColors:
       - punctuation.separator.list.comma.css # Commas separating selectors in CSS
       - constant.language.empty-list.haskell
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   # This is set to conform to the standard of coloring langage constants purple.
   # In this case, this colors "$?", "$@", "$*", "$1", etc..
@@ -1162,7 +1155,7 @@ tokenColors:
       - punctuation.definition.attribute-selector.end.bracket.square.scss
       - punctuation.definition.attribute-selector.begin.bracket.square.scss
     settings:
-      foreground: *JSWHITE
+      foreground: *WHITE
 
   - name: Haskell Pragmas
     scope:
