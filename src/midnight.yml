@@ -9,7 +9,7 @@ dracula:
   base:
     # UI
     - &GLUE '#00E59D' # Glue 500
-    - &WHITE '#FFFFFF' # White
+    - &WHITE '#E9EBEB' # Biscuit 200
     - &LGREY '#909B9B' # Biscuit 500
     - &GREY '#3A3E3E' # Biscuit 600
     - &BG '#1D1F1F' # Biscuit 800
