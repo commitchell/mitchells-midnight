@@ -8,13 +8,13 @@ semanticHighlighting: true
 dracula:
   base:
     # UI
-    - &BG '#1E1E1E'
-    - &GLUE '#00E59D'
-    - &WHITE '#E8E8E8'
-    - &LGREY '#BDBDBD'
-    - &GREY '#3D3D3D'
-    - &DGREY '#181818'
-    - &BISCUIT '#060C0C'
+    - &GLUE '#00E59D' # Glue 500
+    - &WHITE '#FFFFFF' # White
+    - &LGREY '#909B9B' # Biscuit 500
+    - &GREY '#3A3E3E' # Biscuit 600
+    - &BG '#1D1F1F' # Biscuit 800
+    - &DGREY '#0E0F0F' # Biscuit 900
+    - &BISCUIT '#000000' # Black
     - &COMMENT '#6272a4'
     - &CYAN '#78bae0'
     - &ULTRACYAN '#66D9EF'
