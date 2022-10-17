@@ -1,9 +1,9 @@
 {
     "name": "theme-mitchells-midnight",
-    "version": "1.0.4",
+    "version": "1.1.0",
     "displayName": "Mitchell's Midnight",
     "homepage": "https://commitchell.com/",
-    "description": "Fork of Dracula, with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
+    "description": "Dark Visual Studio Code theme, with syntax colour inspiration from Dracula Soft Syntax Theme by yomed.",
     "publisher": "commitchell",
     "license": "MIT",
     "scripts": {
@@ -28,7 +28,7 @@
     },
     "icon": "mitchellsmidnight.png",
     "galleryBanner": {
-        "color": "#181818",
+        "color": "#0E0F0F",
         "theme": "dark"
     },
     "contributes": {
